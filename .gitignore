@@ -1,0 +1,5 @@
+.vagrant
+vagrant/*
+!vagrant/examples
+salt/roots/pillar/nginx.sls
+salt/roots/pillar/grafana.sls
