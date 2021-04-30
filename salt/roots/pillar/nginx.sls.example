@@ -1,0 +1,42 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+
+nginx:
+  lookup:
+    hostuser:
+      name: vagrant
+      group: vagrant
+    host_network: true
+    pod:
+      network:
+        subnet: 10.77.1.0/24
+        gateway: 10.77.1.1
+        domain_name: nginxnet
+        bridge: cni-podman0
+    resources:
+      requests:
+        memory: 512Mi
+      limits:
+        memory: 512Mi
+    port:
+      http:
+        container: 80
+        host: 80
+        ip: 127.0.0.1
+      https:
+        container: 443
+        host: 443
+        ip: 0.0.0.0
+    ssl:
+      default_bits: 2048
+      country: MY
+      state: WP_Kuala_Lumpur
+      city: Kuala_Lumpur
+      organization_name: extra2000
+      organization_unit: research
+      common_name: localhost
+      email: ventilator@radiator.abc
+      days_valid: 365
+    dhparam:
+      enabled: false
+      bits: 2048
