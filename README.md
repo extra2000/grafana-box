@@ -45,7 +45,6 @@ Generate systemd unit for Redis and enable it:
 ```
 $ cd ~/.config/systemd/user
 $ podman generate systemd --files --name redis-pod
-$ systemctl --user daemon-reload
 $ systemctl --user enable pod-redis-pod.service container-redis-pod-redis01.service
 ```
 
@@ -53,7 +52,6 @@ Generate systemd unit for MySQL and enable it:
 ```
 $ cd ~/.config/systemd/user
 $ podman generate systemd --files --name mysql-pod
-$ systemctl --user daemon-reload
 $ systemctl --user enable pod-mysql-pod.service container-mysql-pod-mysql01.service
 ```
 
@@ -61,7 +59,6 @@ Generate systemd unit for NGINX and enable it:
 ```
 $ cd ~/.config/systemd/user
 $ podman generate systemd --files --name nginx-pod
-$ systemctl --user daemon-reload
 $ systemctl --user enable pod-nginx-pod.service container-nginx-pod-srv01.service
 ```
 
@@ -69,7 +66,6 @@ Generate systemd unit for Grafana and enable it:
 ```
 $ cd ~/.config/systemd/user
 $ podman generate systemd --files --name grafana-pod
-$ systemctl --user daemon-reload
 $ systemctl --user enable pod-grafana-pod.service container-grafana-pod-grafana01.service
 ```
 
