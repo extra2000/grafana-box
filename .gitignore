@@ -1,5 +1,6 @@
 .vagrant
 vagrant/*
 !vagrant/examples
+salt/roots/pillar/podman.sls
 salt/roots/pillar/nginx.sls
 salt/roots/pillar/grafana.sls
