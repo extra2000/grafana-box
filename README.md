@@ -11,6 +11,7 @@ Developer box [Grafana](https://grafana.com/).
 
 Copy example pillar files. Optionally you may want to edit the values in these files:
 ```
+$ cp -v salt/roots/pillar/podman.sls.example salt/roots/pillar/podman.sls
 $ cp -v salt/roots/pillar/nginx.sls.example salt/roots/pillar/nginx.sls
 $ cp -v salt/roots/pillar/grafana.sls.example salt/roots/pillar/grafana.sls
 ```
