@@ -3,6 +3,7 @@
 
 grafana:
   lookup:
+    projectname: grafana
     hostuser:
       name: vagrant
       group: vagrant
@@ -15,18 +16,21 @@ grafana:
     grafana:
       port:
         http:
+          server_name: grafana.example.lan
           container: 3000
           host: 3000
           ip: 127.0.0.1
       timezone: browser
       disable_sanitize_html: "false"
+      plugins:
+        - alexanderzobnin-zabbix-app
       db:
-        host: mysql-pod:3306
+        host: grafana-mysql-pod:3306
         name: grafanadb
         user: grafana
         password: abcde12345
       cache:
-        addr: redis-pod:6379
+        addr: grafana-redis-pod:6379
         pool_size: 100
         db: 0
         ssl: "false"
