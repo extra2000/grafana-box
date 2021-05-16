@@ -11,7 +11,6 @@ build_script:
   - cp -v salt/roots/pillar/podman.sls.example salt/roots/pillar/podman.sls
   - cp -v salt/roots/pillar/nginx.sls.example salt/roots/pillar/nginx.sls
   - cp -v salt/roots/pillar/grafana.sls.example salt/roots/pillar/grafana.sls
-  - cp -v salt/roots/formulas/nginx-formula/nginx/files/https.conf.example salt/roots/formulas/nginx-formula/nginx/files/https.conf
   - cp -v vagrant/examples/Vagrantfile.grafana-box.fedora-34.x86_64.example vagrant/Vagrantfile.grafana-box
   - sudo vagrant up --provider=libvirt grafana-box
   - sudo vagrant ssh grafana-box -- sudo salt-call state.highstate
